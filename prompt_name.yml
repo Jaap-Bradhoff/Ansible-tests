@@ -1,0 +1,14 @@
+---
+- name: Playbook with Name Prompt
+  hosts: localhost
+  gather_facts: no
+  
+  vars_prompt:
+    - name: user_name
+      prompt: "Please enter a name"
+      private: no
+  
+  tasks:
+    - name: Display the provided name
+      debug:
+        msg: "Hello, {{ user_name }}!"
