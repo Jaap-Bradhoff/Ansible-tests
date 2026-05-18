@@ -1,0 +1,13 @@
+---
+- name: Example AWX Survey Dropdown
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Show selected environment
+      debug:
+        msg: "You selected environment: {{ target_env }}"
+
+    - name: Run action based on selection
+      debug:
+        msg: "Deploying to {{ target_env }}"

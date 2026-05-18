@@ -1,0 +1,17 @@
+---
+- name: Deploy application
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Show parameters
+      debug:
+        msg:
+          - "Environment: {{ target_env }}"
+          - "Version: {{ app_version }}"
+          - "Run migrations: {{ run_migrations }}"
+
+    - name: Simulate deployment
+      debug:
+        msg: "Deploying version {{ app_version }} to {{ target_env }}"
+``

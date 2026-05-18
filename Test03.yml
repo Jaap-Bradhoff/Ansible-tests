@@ -1,0 +1,19 @@
+{
+  "name": "Environment Selection",
+  "description": "Choose deployment target",
+  "spec": [
+    {
+      "question_name": "Target Environment",
+      "question_description": "Select where to deploy",
+      "required": true,
+      "type": "multiplechoice",
+      "variable": "target_env",
+      "choices": [
+        "dev",
+        "test",
+        "prod"
+      ],
+      "default": "test"
+    }
+  ]
+}
